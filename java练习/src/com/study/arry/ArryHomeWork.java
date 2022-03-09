@@ -57,9 +57,9 @@ public class ArryHomeWork {
         //        二分算法——要寻找的值小于于中间值的情况
         if (insertNum < midNum){
             for(int j = 0;j <= midIndex;j++){
-                if (insertNum > arry[j]){
-                    int temp = arry[j + 1];
-                    arry[j + 1] = arry[arry.length - 1];
+                if (insertNum < arry[j]){
+                    int temp = arry[j];
+                    arry[j] = arry[arry.length - 1];
                     arry[arry.length - 1] = temp;
                     break;
                 }
