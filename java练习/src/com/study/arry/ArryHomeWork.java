@@ -72,8 +72,8 @@ public class ArryHomeWork {
         此时将后一位的数和最后一个元素交换
 
          */
-        int sortIndex = arry.length - 1;
-        while(sortIndex >= 0){
+        int sortIndex = arry.length - 2;
+        while(arry[arry.length - 2] > arry[arry.length - 1]){
             if (arry[arry.length - 1] > arry[sortIndex]) {
                 //交换两数的位置
                 int temp = arry[sortIndex + 1];
