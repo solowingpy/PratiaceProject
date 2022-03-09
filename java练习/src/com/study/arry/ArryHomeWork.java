@@ -1,5 +1,7 @@
 package com.study.arry;
 
+import static com.study.arry.ArryPratiace.read;
+
 /**
  * @author zzd19
  * 二维数组编程练习
@@ -42,27 +44,46 @@ public class ArryHomeWork {
         //        二分算法——要寻找的值大于中间值的情况
         if(insertNum > midNum){
 //            从从数组的最后一个元素开始遍历，直到中间值所在下标
-            for(int i = arry.length - 1;i >= arry.length / midIndex;i--){
-                //插入的值大于值
+            for(int i = arry.length - 1;i >= midIndex;i--){
+                //插入的值大于遍历到的值
                 if (insertNum > arry[i]){
                      int temp = arry[i + 1];
                      arry[i + 1] = arry[arry.length - 1];
                      arry[arry.length - 1] = temp;
-
+                     break;
                 }
             }
         }
         //        二分算法——要寻找的值小于于中间值的情况
         if (insertNum < midNum){
-            for(int j = 0;j <= arry.length / midIndex;j++){
+            for(int j = 0;j <= midIndex;j++){
                 if (insertNum > arry[j]){
                     int temp = arry[j + 1];
                     arry[j + 1] = arry[arry.length - 1];
                     arry[arry.length - 1] = temp;
-
+                    break;
                 }
             }
         }
-        //TODO:完善交换之后对数组重新排序的代码
+        /*
+        对插入的值进行重新排序
+        由于最后排序的是升序数组，所以用贪心算法从后往前匹配
+        一直匹配到遍历到的数比最后一个数小为止
+        此时将后一位的数和最后一个元素交换
+
+         */
+        int sortIndex = arry.length - 1;
+        while(sortIndex >= 0){
+            if (arry[arry.length - 1] > arry[sortIndex]) {
+                //交换两数的位置
+                int temp = arry[sortIndex + 1];
+                arry[sortIndex + 1] = arry[arry.length - 1];
+                arry[arry.length - 1] = temp;
+                //重新将下标索引定位到数组最后一个元素
+                sortIndex = arry.length - 1;
+            }
+            sortIndex--;
+        }
+        read(arry);
     }
 }
