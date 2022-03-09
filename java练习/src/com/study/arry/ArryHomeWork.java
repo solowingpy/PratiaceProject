@@ -70,17 +70,19 @@ public class ArryHomeWork {
         由于最后排序的是升序数组，所以用贪心算法从后往前匹配
         一直匹配到遍历到的数比最后一个数小为止
         此时将后一位的数和最后一个元素交换
-
+        initSortIndex:数组倒数第二个元素的索引
+        当数组倒数第二个元素小于最后一个元素时，则判定为数组已经排序完毕
          */
+        int initSortIndex = arry.length - 2;
         int sortIndex = arry.length - 2;
-        while(arry[arry.length - 2] > arry[arry.length - 1]){
+        while(arry[initSortIndex] > arry[arry.length - 1]){
             if (arry[arry.length - 1] > arry[sortIndex]) {
                 //交换两数的位置
                 int temp = arry[sortIndex + 1];
                 arry[sortIndex + 1] = arry[arry.length - 1];
                 arry[arry.length - 1] = temp;
                 //重新将下标索引定位到数组最后一个元素
-                sortIndex = arry.length - 1;
+                sortIndex = arry.length - 2;
             }
             sortIndex--;
         }
