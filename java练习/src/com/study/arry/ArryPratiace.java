@@ -141,5 +141,6 @@ public class ArryPratiace {
         for (int j : arry1) {
             System.out.print(j + "\t");
         }
+        System.out.println();
     }
 }
