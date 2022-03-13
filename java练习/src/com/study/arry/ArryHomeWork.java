@@ -1,5 +1,7 @@
 package com.study.arry;
 
+import java.util.Scanner;
+
 import static com.study.arry.ArryPratiace.read;
 
 /**
@@ -9,6 +11,7 @@ import static com.study.arry.ArryPratiace.read;
 public class ArryHomeWork {
     public static void main(String[] args) {
         insertAndSort();
+        insertAndSortFix();
     }
 
     /**
@@ -86,6 +89,57 @@ public class ArryHomeWork {
             }
             sortIndex--;
         }
+        read(arry);
+    }
+
+    /**
+     * 另一种实现的思路：
+     * 其实这道题分为两部分，首先对要插入的数进行定位，然后再插入
+     * 解简单的数组题，可以定义一个索引变量来来存储关键元素的位置信息
+     * 可以这样分析：要保证插入一个新元素之后保证原数组的顺序不变
+     * 就必须先确定这个元素要插入的位置，这时就应该定义一个索引变量，先存储位置信息
+     * 方便进一步的分析
+     * 首先从从头遍历数组，如果要插入的数组大于指针变量指向的元素，就说明这个元素的后一个位置就是
+     * 插入的数应该待的位置
+     * 此时有两种额外情况：
+     * 1.插入的数比数组当中的任何一个数都小，说明此时待插入数的正确位置是数组的第一个元素
+     * 2.插入的数比数组当中的任何一个数都大，说明待插入数的位置超过了原数组的索引，位置在原数组的长度+1
+     * 定好位置之后，把这个位置的索引存储起来，用作他用
+     * 接下来考虑在不影响原数组顺序的情况下完成插入
+     * 接下来就要创建新数组了
+     * 创建新数组后，可以使用算法对插入后的新数组重新排序，但是这样相当不必要
+     * 最简单的方法是直接拷贝数组，空出插入数的索引即可
+     * 这时候记录的索引就发挥作用了
+     * ps:这种解法比较暴力
+     */
+    private static void insertAndSortFix(){
+        int[] arry = {10,12,23,45,90};
+        int index = -1;
+        Scanner myScanner = new Scanner(System.in);
+        int insertNum = myScanner.nextInt();
+        //遍厉数组，定位索引
+        for (int i = 0; i < arry.length; i++) {
+            if(arry[i] > insertNum){
+                index = i;
+                break;
+            } else if (arry[0] > insertNum){
+                index = 0;
+                break;
+            } else if (arry[arry.length - 1] > insertNum){
+                index = arry.length;
+                break;
+            }
+        }
+        int[] newArray = new int[arry.length + 1];
+        for(int i = 0,j = 0;i < arry.length;i++){
+            if (i == index) {
+                newArray[i] = insertNum;
+            } else {
+                newArray[i] = arry[j];
+                j++;
+            }
+        }
+        arry = newArray;
         read(arry);
     }
 
