@@ -119,19 +119,25 @@ public class ArryHomeWork {
         int insertNum = myScanner.nextInt();
         //遍厉数组，定位索引
         for (int i = 0; i < arry.length; i++) {
+            //正常情况，带插入数既不大于最大的数又不小于最小的数
             if(arry[i] > insertNum){
                 index = i;
                 break;
-            } else if (arry[0] > insertNum){
-                index = 0;
+
+            }
+            //待插入的数比数组当中任何一个数都大
+            else if (insertNum > arry[arry.length - 1]){
+                index = arry.length;
                 break;
-            } else if (arry[arry.length - 1] > insertNum){
+            }
+            //待插入的数比数组中的任何一个数都小
+            else if (insertNum < arry[0]){
                 index = arry.length;
                 break;
             }
         }
         int[] newArray = new int[arry.length + 1];
-        for(int i = 0,j = 0;i < arry.length;i++){
+        for(int i = 0,j = 0;i < newArray.length;i++){
             if (i == index) {
                 newArray[i] = insertNum;
             } else {
