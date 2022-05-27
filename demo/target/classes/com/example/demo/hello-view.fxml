@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.window.controller.HelloController">
+   <center>
+      <Pane prefHeight="303.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <Button defaultButton="true" layoutX="46.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#onLoginButtonClicked" prefHeight="52.0" prefWidth="179.0" text="登入" />
+         <Button layoutX="344.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClicked" prefHeight="58.0" prefWidth="164.0" text="退出" />
+         <Label layoutX="104.0" layoutY="62.0" prefHeight="29.0" prefWidth="60.0" text="用户名：">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="106.0" layoutY="129.0" prefHeight="24.0" prefWidth="48.0" text="密码：">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="userNameFiled" layoutX="183.0" layoutY="65.0" />
+         <PasswordField fx:id="passWordFiled" layoutX="183.0" layoutY="129.0" />
+         <Button layoutX="236.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#onSignUpButtonClicked" prefHeight="23.0" prefWidth="78.0" text="注册">
+            <effect>
+               <Glow level="0.32" />
+            </effect>
+         </Button>
+      </Pane>
+   </center>
+   <top>
+      <Label prefHeight="93.0" prefWidth="302.0" text="                      登录系统" textAlignment="CENTER" textFill="#e51010" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
