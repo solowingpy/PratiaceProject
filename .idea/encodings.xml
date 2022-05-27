@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fxTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fxTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java练习/src/com/study/basicofjava/processcontrol/SwitchPratiace01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/java练习/src/com/study/basicofjava/课后实践比较成员变量和局部变量.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java练习/src/com/study/basicofjavalanguage/stringpratiace/Realize.java" charset="GBK" />
+  </component>
+</project>
+

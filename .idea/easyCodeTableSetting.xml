@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EasyCodeTableSetting">
+    <option name="tableInfoMap">
+      <map>
+        <entry key="com.study.methord.ThisDetail">
+          <value>
+            <TableInfoDTO>
+              <option name="comment" value="关于this,this可以访问本类中的其他构造方法" />
+              <option name="fullColumn">
+                <list />
+              </option>
+              <option name="name" value="ThisDetail" />
+              <option name="preName" value="" />
+              <option name="saveModelName" value="" />
+              <option name="savePackageName" value="" />
+              <option name="savePath" value="" />
+              <option name="templateGroupName" value="" />
+            </TableInfoDTO>
+          </value>
+        </entry>
+        <entry key="com.zzd.study.oopcore.Account">
+          <value>
+            <TableInfoDTO>
+              <option name="comment" value="封装的课堂练习" />
+              <option name="fullColumn">
+                <list>
+                  <ColumnInfoDTO>
+                    <option name="custom" value="false" />
+                    <option name="ext">
+                      <map />
+                    </option>
+                    <option name="name" value="name" />
+                    <option name="type" value="java.lang.String" />
+                  </ColumnInfoDTO>
+                  <ColumnInfoDTO>
+                    <option name="custom" value="false" />
+                    <option name="ext">
+                      <map />
+                    </option>
+                    <option name="name" value="passWord" />
+                    <option name="type" value="java.lang.String" />
+                  </ColumnInfoDTO>
+                  <ColumnInfoDTO>
+                    <option name="custom" value="false" />
+                    <option name="ext">
+                      <map />
+                    </option>
+                    <option name="name" value="balance" />
+                    <option name="type" value="double" />
+                  </ColumnInfoDTO>
+                </list>
+              </option>
+              <option name="name" value="Account" />
+              <option name="preName" value="" />
+              <option name="saveModelName" value="" />
+              <option name="savePackageName" value="" />
+              <option name="savePath" value="" />
+              <option name="templateGroupName" value="" />
+            </TableInfoDTO>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
